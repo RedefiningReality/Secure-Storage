@@ -26,7 +26,7 @@ Files are transferred using an original encrypted protocol that consists of the 
 5. Sending the file encrypted with AES-256 symmetric encryption  
 
 As well as being transferred using AES encryption, files are stored on storage servers in full using AES-256 encryption, and the original plaintext file is deleted after encryption.
-All RSA keys as well as the keys for the AES-256 encryption of files stored on the storage server are located under /opt/secure_storage/keys  
+All RSA keys as well as the keys for the AES-256 encryption of files stored on the storage server are located under ```/opt/secure_storage/keys```  
 
 ### Additional Features
 
