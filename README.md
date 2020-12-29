@@ -27,6 +27,6 @@ All RSA keys as well as the keys for the AES-256 encryption of files stored on t
 Operations supported on the web server are list files, upload file, and download file  
 
 The [setup.sh](/setup.sh) script can be used to download the contents of this repository and set them up for both the server (storage servers) and client (web server) side.
-It creates a service on the storage servers that acts as a server, either receiving commands from the other storage server or receiving commands from the web server and forwarding them to the other storage server (if relevant).
+It creates the service ```securestore``` on the storage servers that acts as a server, either receiving commands from the other storage server or receiving commands from the web server and forwarding them to the other storage server (if relevant).
 It creates the command ```securestore``` on the web server that acts as a client and connects to the master storage server.
 Try ```sudo ./setup.sh -h``` for more info
