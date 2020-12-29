@@ -1,18 +1,16 @@
 #!/bin/bash
 if [ $(/usr/bin/id -u) -ne 0 ]; then
-    echo "Please run this script as root (sudo ./setup.sh [client/server] [name] [username] [password])"
+    echo "Please run this script as root (sudo ./setup.sh [client/server] [name])"
     exit
 fi
 
-if [ "$#" -ne 4 ] || [[ $1 != "client" ] && [ $1 != "server" ]]; then
-	echo "Usage: sudo ./setup.sh [client/server] [name] [username] [password]"
+if [ "$#" -ne 2 ] || [[ $1 != "client" ] && [ $1 != "server" ]]; then
+	echo "Usage: sudo ./setup.sh [client/server] [name]"
 	echo ""
 	echo "Options:"
 	echo "[client/server]   client => web server"
 	echo "                  server => storage server"
 	echo "[name]            machine name"
-	echo "[username]        username to GitHub repository"
-	echo "[password]        password to GitHub repository"
 	exit
 fi
 
@@ -21,7 +19,7 @@ apt update
 apt install openjdk-8-jre git -y
 
 echo "Cloning secure storage GitHub repository"
-git clone https://$3:$4@github.com/TheCatLover/Secure-Storage.git /opt/secure_storage
+git clone https://github.com/TheCatLover/Secure-Storage.git /opt/secure_storage
 
 echo "Setting up gen-keys command"
 echo "#!/bin/bash" > /usr/bin/gen-keys
