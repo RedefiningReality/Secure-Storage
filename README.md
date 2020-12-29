@@ -19,7 +19,7 @@ Commands are sent in the following manner:
 ### Encryption
 
 Files are transferred using an original encrypted protocol that consists of the following steps:
-1. Creating an original randomly-generated AES-256 symmetric key and IV
+1. Creating a new randomly-generated AES-256 symmetric key and IV
 2. Sending the AES-256 symmetric key encrypted with the recipient's public key
 3. Sending a hash of the AES-256 symmetric key encrypted with the sender's private key
 4. Sending the AES-256 IV in the same way the symmetric key was sent
