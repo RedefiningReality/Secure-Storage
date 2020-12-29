@@ -20,8 +20,8 @@ Commands are sent in the following manner:
 
 Files are transferred using an original encrypted protocol that consists of the following steps:
 1. Creating a new randomly-generated AES-256 symmetric key and IV
-2. Sending the AES-256 symmetric key encrypted with the recipient's public key
-3. Sending a hash of the AES-256 symmetric key encrypted with the sender's private key
+2. Sending the AES-256 symmetric key encrypted with the recipient's public RSA key
+3. Sending a hash of the AES-256 symmetric key encrypted with the sender's private RSA key
 4. Sending the AES-256 IV in the same way the symmetric key was sent
 5. Sending the file encrypted with AES-256 symmetric encryption  
 
