@@ -4,6 +4,7 @@ Command line utility to securely transfer files from web server to two storage s
 The network is intended to be comprised of three servers:
 - two storage servers (not connected to internet)
 - one web server (connected to internet)  
+
 All machines should be running a Linux/Unix Operating System. The jar files were additionally tested on Windows, but the setup script is targeted towards Linux.
 In the event of failure of one storage server, the other will perform all the same tasks without any issues  
 
